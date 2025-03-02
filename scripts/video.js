@@ -23,7 +23,7 @@ const loadCategories = () => {
     .then((data) => displayCategories(data.categories))
     .catch((error) => console.log(error));
 };
-const loadVideos = (searchText) => {
+const loadVideos = (searchText ="") => {
   console.log("load videos");
   fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchText}`)
     .then((res) => res.json())
